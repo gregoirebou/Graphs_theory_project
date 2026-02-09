@@ -50,6 +50,23 @@ class Graph:
                 return True
         return False
 
+    def compute_ranks(self):
+        g = self.clone()
+        rank = {}
+        k = 0
+        while g.graph:
+            vertices = []
+            for vertex in g.graph:
+                if not g.get_predecessors(vertex):
+                    vertices.append(vertex)
+            if not vertices:
+                raise ValueError("Circuit détecté")
+            for vertex in vertices:
+                rank[vertex] = k
+                del g.graph[vertex]
+            k = k + 1
+        return rank
+
     def __str__(self):
         result = ""
         for vertex, successors in self.graph.items():
