@@ -1,3 +1,6 @@
+import copy
+
+
 class Graph:
     def __init__(self):
         self.graph = {}
@@ -29,8 +32,26 @@ class Graph:
                     predecessors.append(predecessor)
         return predecessors
 
+    def clone(self):
+        g = Graph()
+        g.graph = copy.deepcopy(self.graph)
+        return g
+
+    def contains_cycle(self):
+        g = self.clone()
+        while g.graph:
+            deleted = False
+            for vertex in g.graph:
+                if not g.get_predecessors(vertex):
+                    deleted = True
+                    del g.graph[vertex]
+                    break
+            if not deleted:
+                return True
+        return False
+
     def __str__(self):
         result = ""
         for vertex, successors in self.graph.items():
-            result += f"{vertex} -> {successors}\n"
+            result += f"{vertex} -> {self.get_successors(vertex)}\n"
         return result
