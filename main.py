@@ -1,14 +1,6 @@
-from graph import Graph  # Assure-toi que ton fichier s'appelle bien graphe.py
+from graph import Graph
 
-# Graph creation
-my_graph = Graph()
-
-
-my_graph.add_edge("A", "B", 1)
-my_graph.add_edge("A", "C", 2)
-my_graph.add_edge("B", "D", 4)
-my_graph.add_edge("C", "D", 1)
-
-# Printing
-print("--- My Graph ---")
-print(my_graph)
+g = Graph()
+g.load("graph_test1.txt")
+print(g)
+print(g.adjacency_matrix())
