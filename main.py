@@ -14,7 +14,7 @@ def display_menu():
 
 def get_graph_filepath(graph_number):
     """Retourne le chemin du fichier pour un numéro de graphe donné."""
-    return f"graph_test{graph_number}.txt"
+    return f"graph_tests/graph_test{graph_number}.txt"
 
 
 def path_query_loop(L, P, nodes):
