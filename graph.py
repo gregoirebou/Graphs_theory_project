@@ -195,10 +195,7 @@ class Graph:
 
         for i in range(n):
             for j in range(n):
-                if i != j and L[i][j] != INF:
-                    P[i][j] = i  # le prédécesseur de j sur le chemin i->j est i
-                else:
-                    P[i][j] = None
+                P[i][j] = i
 
         if verbose:
             self.display_matrix(L, nodes, title="L(0) — Matrice initiale des distances")
