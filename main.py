@@ -76,17 +76,18 @@ def process_graph():
     chargement, affichage, Floyd-Warshall, détection circuit absorbant,
     affichage des chemins.
     """
-    try:
-        graph_number = int(input("  Numéro du graphe à analyser : ").strip())
-    except ValueError:
-        print("  Erreur : veuillez entrer un entier.")
-        return
+    while True:
+        try:
+            graph_number = int(input("  Numéro du graphe à analyser : ").strip())
+        except ValueError:
+            print("  Erreur : veuillez entrer un entier.")
+            continue
 
-    filepath = get_graph_filepath(graph_number)
+        filepath = get_graph_filepath(graph_number)
 
-    g = Graph()
-    if not g.load(filepath):
-        return
+        g = Graph()
+        if g.load(filepath):
+            break
 
     # Affichage sous forme de liste adjacence
     print(f"\n{'=' * 60}")
