@@ -14,7 +14,7 @@ python main.py
 
 Le menu permet de :
 - Charger un graphe par numéro (ex: `1` → `graph_tests/graph_test1.txt`)
-- Charger un graphe par chemin (ex: `graph_tests/graph_application.txt`)
+- Charger le graphe de l'application → numero 999
 - Visualiser la matrice de valeurs, les matrices L et P intermédiaires
 - Détecter les circuits absorbants
 - Afficher les chemins de valeurs minimales
