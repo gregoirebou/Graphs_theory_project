@@ -112,7 +112,7 @@ def process_graph():
     print(f"{'=' * 60}")
 
     if has_negative_cycle:
-        print("  ⚠  Le graphe contient au moins un circuit absorbant !")
+        print("  Le graphe contient au moins un circuit absorbant !")
         print("  Les distances calculées ne sont pas fiables.")
         # On identifie les sommets concernés
         for i, node in enumerate(nodes):
@@ -121,7 +121,7 @@ def process_graph():
                       f"(L[{node}][{node}] = {L[i][i]})")
         return
 
-    print("  ✓  Le graphe ne contient aucun circuit absorbant.")
+    print("  Le graphe ne contient aucun circuit absorbant.")
 
     # Affichage des matrices finales
     Graph.display_matrix(L, nodes, title="L finale - Distances minimales")
