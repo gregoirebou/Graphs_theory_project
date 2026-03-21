@@ -52,3 +52,4 @@ Les sommets sont numérotés de 0 à n-1. Les valeurs négatives et nulles sont 
 - Grégoire Boucheroy
 - Louis Champigneule
 - William Robert
+- Geremy Ruis
