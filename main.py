@@ -124,8 +124,8 @@ def process_graph():
     print("  ✓  Le graphe ne contient aucun circuit absorbant.")
 
     # Affichage des matrices finales
-    Graph.display_matrix(L, nodes, title="L finale — Distances minimales")
-    Graph.display_matrix_P(P, nodes, title="P finale — Prédécesseurs")
+    Graph.display_matrix(L, nodes, title="L finale - Distances minimales")
+    Graph.display_matrix_P(P, nodes, title="P finale - Prédécesseurs")
 
     # Affichage des chemins de valeurs minimales
     path_query_loop(L, P, nodes)
@@ -134,7 +134,7 @@ def process_graph():
 def main():
     """Boucle principale du programme."""
     print("\n" + "#" * 60)
-    print("  PROJET SM601 — THÉORIE DES GRAPHES")
+    print("  PROJET SM601 - THÉORIE DES GRAPHES")
     print("  Algorithme de Floyd-Warshall")
     print("#" * 60)
 

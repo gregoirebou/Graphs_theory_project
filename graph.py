@@ -198,8 +198,8 @@ class Graph:
                 P[i][j] = i
 
         if verbose:
-            self.display_matrix(L, nodes, title="L(0) — Matrice initiale des distances")
-            self.display_matrix_P(P, nodes, title="P(0) — Matrice initiale des prédécesseurs")
+            self.display_matrix(L, nodes, title="L(0) - Matrice initiale des distances")
+            self.display_matrix_P(P, nodes, title="P(0) - Matrice initiale des prédécesseurs")
 
         # Boucle principale : k est le sommet intermédiaire
         for k in range(n):
@@ -213,9 +213,9 @@ class Graph:
 
             if verbose:
                 self.display_matrix(L, nodes,
-                                    title=f"L({k + 1}) — Après passage par le sommet {nodes[k]}")
+                                    title=f"L({k + 1}) - Après passage par le sommet {nodes[k]}")
                 self.display_matrix_P(P, nodes,
-                                      title=f"P({k + 1}) — Après passage par le sommet {nodes[k]}")
+                                      title=f"P({k + 1}) - Après passage par le sommet {nodes[k]}")
 
         # Détection de circuit absorbant : diagonale de L
         has_negative_cycle = False
